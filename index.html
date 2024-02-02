@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yp online</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f5f5f5;
+            }
+
+            .header {
+                background-color: #fff;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 1rem 1.5rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .nav {
+                display: flex;
+                align-items: center;
+            }
+
+            .nav-list {
+                display: flex;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            .nav-item {
+                 margin-right: 2.5rem;
+            }
+
+            .nav-link {
+                text-decoration: none;
+                color: #333;
+                font-size: 0.9rem;
+                font-weight: bold;
+                text-transform: uppercase;
+                display: block;
+                padding: 0.5rem 0;
+            }
+
+            .nav-link:hover {
+                color: aqua;
+                transition: 0.3s ease-in-out;
+            }
+
+            .cta-button {
+                background-color: aqua;
+                color: #fff;
+                font-size: 1.1rem;
+                font-weight: bold;
+                padding: 0.5rem 1.5rem;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+
+            .cta-button:hover {
+                background-color: #249D9F;
+            }
+
+            .main-content{
+                width: 96%;
+                margin: 0 auto;
+            }
+
+            .intro{
+                display: flex;
+            }
+
+            .intro-img{
+                margin-top: 20px;
+            }
+
+            .intro-img img{
+                width: 800px !important;
+                
+            }
+
+            .Intro-container {
+                max-width: 800px;
+                padding: 50px;
+                margin-top: 20px;
+                background-color: #2A6FD6;
+                border-radius: 5px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            .text-container {
+                margin-bottom: 50px;
+            }
+
+            .slogan {
+                font-size: 14px;
+                font-weight: bold;
+                color: #BFCEEF;
+                text-transform: uppercase;
+                margin-bottom: 17px;
+            }
+
+            .heading {
+                font-size: 55px;
+                font-weight: bold;
+                color: #fff;
+                text-transform: uppercase;
+                margin-bottom: 30px;
+            }
+
+            .description {
+                font-size: 20px;
+                color: #BFCEEF;
+                line-height: 1.5;
+                margin-bottom: 50px;
+            }
+
+            .button {
+                width: 250px;
+                display: flex;
+                align-items: center;
+                border: 4px solid #B5D75C;
+                color: #fff;
+                font-size: 17px;
+                font-weight: bold;
+                padding: 15px 30px;
+                text-decoration: none;
+                margin-right: 20px;
+                border-radius: 5px;
+                transition: background-color 0.3s ease;
+                white-space: nowrap;
+            }
+
+            .button:hover {
+                background-color: #B5D75C;
+            }
+
+            .button:last-child {
+                margin-right: 0;
+            }
+
+            .positive-info{
+                background-image: url(Res-flex.jpeg);
+                height: 25vh;
+                width: 90%;
+                margin: 0 auto;
+                margin-top: 20px;
+                display: flex;
+                gap: 10%;
+            }
+
+            .report-stars{
+                position: relative;
+                left: 13%;
+                top: 26%;
+            }
+
+            .report-stars h1{
+                font-size: 24px;
+                margin-bottom: 10px;
+                color: #1A3841;
+            }
+
+            .report-stars p{
+                font-size: 16px;
+                margin-bottom: 20px;
+                color: #7A7E82;
+                position: relative;
+                right: 35px;
+            }
+
+            .about-us{
+                margin-top: 50px;
+                width: 90%;
+                margin: 0 auto;
+                padding-top: 80px;
+                display: flex;
+                gap: 50px;
+            }
+
+            .about-content h5{
+                color: #196C68;
+                font-weight: bold;
+            }
+
+            .about-content h1{
+                color: #1A3841;
+                font-size: 40px;
+                margin-bottom: 40px;
+            }
+
+            .about-content p{
+                color: #8E9295;
+                margin-bottom: 30px;
+            }
+
+            .about-content li{
+                color: #8E9295;
+                margin-bottom: 15px;
+            }
+
+            .about-button{
+                width: 180px;
+                display: flex;
+                align-items: center;
+                border: none;
+                background: #0C6460;
+                color: #fff;
+                font-size: 14px;
+                font-weight: bold;
+                padding: 15px 30px;
+                text-decoration: none;
+                margin-right: 20px;
+                margin-top: 40px;
+                border-radius: 23px;
+                transition: background-color 0.3s ease;
+                white-space: nowrap;
+            }
+
+            .about-button:hover{
+                background: #2A6FD6;
+            }
+
+            .summary-info{
+                width: 25%;
+                height: 40vh;
+                background: #fff;
+                position: relative;
+                top: 60px;
+            }
+
+            .summary-info img{
+                width: 350px;
+               position: relative;
+               bottom: 30px;
+               right: 20px;
+            }
+
+            .summary-info h3{
+                color: #196C68;
+                font-weight: bold;
+            }
+
+            .summary-info p{
+                color: #8E9295;
+            }
+
+            .summary-info h3, p{
+                padding-left: 40px;
+            }
+
+            .services{
+                margin-top: 50px;
+                width: 90%;
+                margin: 0 auto;
+                padding-top: 80px;
+            }
+
+            .services h5{
+                color: #196C68;
+                font-weight: bold;
+            }
+
+            .services h1{
+                color: #1A3841;
+                font-size: 40px;
+            }
+
+            .service-cards{
+                display: flex;
+                gap: 30px;
+            }
+
+            .service-cards .card{
+                width: 40%;
+                height: 55vh;
+                border: 1px solid #E2E5E7;
+                border-radius: 30px;
+                background: #FFFFFF;
+                margin-top: 50px;
+            }
+
+            .service-cards .card:hover{
+                background: #1A363F;
+                transition: 0.3s ease-in-out;
+            }
+
+            .service-cards .card:hover h2{
+                color: #FFFFFF;
+            }
+
+            .service-cards .card:hover p{
+                color: #8AA3AB
+            }
+
+            .service-cards .card img{
+               padding: 20px 10px ;
+               border-radius: 20px;
+               width: 120px;
+               position: relative;
+               left: 10%;
+               top: 10%;
+            }
+
+            .service-cards .card .serv-cardText{
+                margin-top: 130px;
+                position: relative;
+                left: 10%;
+            }
+
+            .serv-cardText h6{
+                color: #8E9295;
+            }
+
+            .serv-cardText p{
+                color: #8E9295;
+                position: relative;
+                right: 35px;
+            }
+
+            .serv-cardText h2{
+                color: #1A3841;
+            }
+
+            .service-button{
+                width: 180px;
+                display: flex;
+                align-items: center;
+                border: none;
+                background: #0C6460;
+                color: #fff;
+                font-size: 14px;
+                font-weight: bold;
+                padding: 15px 30px;
+                text-decoration: none;
+                margin-right: 20px;
+                margin-top: 30px;
+                border-radius: 23px;
+                transition: background-color 0.3s ease;
+                white-space: nowrap;
+            }
+
+            .service-button:hover{
+                background: #FFFFFF;
+                color: #0C6460;
+            }
+
+            .lets-help{
+                background: #212529;
+                height: 30vh;
+                margin-top: 80px;
+            }
+
+            .lets-helpContent{
+                width: 60%;
+                margin: 0 auto;
+                padding-top: 80px;
+                display: flex;
+                gap:80px;
+            }
+
+            .lets-helpContent h1{
+                color: #FFFFFF;
+                font-size: 35px;
+                font-weight: bold;
+            }
+
+            .form{
+                margin-top: 80px;
+                background: #FFFFFF;
+            }
+
+            .form-content{
+                padding-top: 60px;
+                display: flex;
+                gap: 42px;
+            }
+
+            .form-imput input{
+                width: 300px;
+                height: 5vh;
+                border: none;
+                border: 1px solid #E6E6E6;
+                border-radius: 30px;
+                font-size: 16px;
+                color: #757575;
+                padding: 20px;
+            }
+
+            .form-imput .first-part, .second-part{
+                display: flex;
+                gap: 30px;
+                margin-bottom: 17px;
+            }
+
+            .form-imput textarea{
+                width: 620px;
+                height: 18vh;
+                border: none;
+                border: 1px solid #E6E6E6;
+                border-radius: 20px;
+                font-size: 16px;
+                color: #757575;
+                padding: 20px;
+            }
+
+            .form-button{
+                width: 260px;
+                display: flex;
+                align-items: center;
+                border: none;
+                background: #0C6460;
+                color: #fff;
+                font-size: 15px;
+                font-weight: bold;
+                padding: 15px 30px;
+                text-decoration: none;
+                margin-right: 20px;
+                margin-top: 20px;
+                border-radius: 23px;
+                transition: background-color 0.3s ease;
+                white-space: nowrap;
+            }
+
+            .form-button:hover{
+                background: #2A6FD6;
+            }
+
+            .ending-dets{
+                background: #0053CE;
+                height: 50vh;
+                margin-top: 80px;
+                padding-top: 60px;
+            }
+
+            .ending-detsCont{
+                width: 80%;
+                margin: 0 auto;
+                display:flex;
+                gap: 90px;
+                text-align: left;
+                justify-content: left;
+                color: #A3B6E7;
+            }
+
+            .ending-detsCont h3{
+                color:#FFFFFF;
+            }
+
+            .ending-detsCont a{
+                text-decoration: none;
+                color: #A3B6E7;
+                font-size: 14px;
+                font-weight: bold;
+            }
+
+            .ending-detsCont span{
+                font-size: 14px;
+                font-weight: bold;
+            }
+
+            .ending-detsCont li{
+                list-style: none;
+                margin-bottom: 15px;
+            }
+
+            .ending-hr{
+                width: 80%;
+                margin: 0 auto;
+                margin-top: 100px;
+                border: none;
+                border: 1px solid #A3B6E7;
+            }
+
+            .end-flex{
+                width: 80%;
+                margin: 0 auto;
+                display: flex;
+                margin-top: 50px;
+                color: #A3B6E7;
+                gap: 60%;
+            }
+            
+    </style>
+</head>
+<body>
+
+
+    <header class="header">
+        <div class="container">
+            <img src="yip-online.png" alt="" style="width: 100px;">
+
+          <nav class="nav">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="#" class="nav-link">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">PRODUCTS</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">CAREERS</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">CONTACT US</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">JOIN US</a>
+              </li>
+            </ul>
+            <button class="cta-button">GET IN TOUCH &rarr;</button>
+          </nav>
+        </div>
+      </header>
+
+      <div class="main-content">
+
+        <div class="intro">
+            <div class="Intro-container">
+                <div class="text-container">
+                  <p class="slogan">WERE MORE THAN 20+ YEARS IN BUSINESS</p>
+                  <h1 class="heading">Solving Your Vision Is Our Dedication</h1>
+                  <p class="description">
+                    You're in luck, we have just what you need: simple, affordable and <br>
+                    quick-to-deploy technology , tools and apps for SME and Large <br>
+                    Enterprises!
+                  </p>
+                </div>
+                <div class="button-container">
+                  <a href="#" class="button">GET STARTED NOW &rarr;</a>
+                </div>
+            </div>
+            <div class="intro-img">
+                    <img src="img2.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="positive-info">
+            <div class="report-stars">
+                <h1>Report Creation</h1>
+                <p>Leverage agile frameworks to provide a <br>
+                     robust synopsis for high-reaching goals.
+                </p>
+            </div>
+
+            <div class="report-stars">
+                <h1>Reaching Goals</h1>
+                <p>A broad topic that encompasses various <br>
+                     aspects of personal.
+                </p>
+            </div>
+
+            <div class="report-stars">
+                <h1>5 Starts Rating</h1>
+                <p>it's often associated with feedback or <br>
+                     evaluation.
+                </p>
+            </div>
+        </div>
+
+        <div class="about-us">
+            <div class="about-content">
+                <h5>ABOUT OUR COMPANY</h5>
+                <h1>The leading Business <br> <i style="font-family: 'Dancing Script', cursive;">consulting firm.</i> </h1>
+                <p>With a legacy of excellence spanning 10 years, Growhub has amassed unparalleled expertise <br> across industries.</p>
+
+                    <ul>
+                        <li>Valuation Services</li>
+                        <li>Development of Financial Models</li> 
+                        <li>Corporate Financial Advisory</li>  
+                        <li>Deal Structuring</li>
+                    </ul>
+                    <div class="about-buttonCont">
+                        <a href="#" class="about-button">LEARN MORE &rarr;</a>
+                    </div>
+            </div>
+            <div class="summary-info">
+                <img src="pexels-photo-5324973.jpeg" alt="...">
+
+                <h3>MISSION</h3>
+                <p>Building accessible tech to Structure <br>
+                    & Scale-up up African Businesses!
+                </p>
+            </div>
+        </div>
+
+        <div class="services">
+            <h5>VIEW OUR SERVICES</h5>
+            <h1>We provide useful features <br> <i style="font-family: 'Dancing Script', cursive;">for your business</i></h1>
+            
+            <div class="service-cards">
+
+                <div class="card">
+                    <img src="serv1.jpeg" alt="...">
+                    <div class="serv-cardText">
+                        <h6>SERVICE 1</h6>
+                        <h2>Consulting Services</h2>
+                        <p>Improve efficiency provide a better with modern <br>
+                            technology services available around the world. <br>
+                            Before diving into any business idea.
+                        </p>
+                        <a href="#" class="service-button">READ MORE &rarr;</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="serv2.jpeg" alt="...">
+                    <div class="serv-cardText">
+                        <h6>SERVICE 2</h6>
+                        <h2>Management Services</h2>
+                        <p>provide a better customer experience with <br>
+                           modern services available in around the world. <br>
+                           Before diving into any business.
+                        </p>
+                        <a href="#" class="service-button">READ MORE &rarr;</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="serv3.jpeg" alt="...">
+                    <div class="serv-cardText">
+                        <h6>SERVICE 3</h6>
+                        <h2>Insurance Services</h2>
+                        <p>Before diving into any business idea, conduct<br>
+                            thorough market research. Understand your <br>
+                            target and industry trends.
+                        </p>
+                        <a href="#" class="service-button">READ MORE &rarr;</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="lets-help">
+            <div class="lets-helpContent">
+                <div>
+                    <h1>LET'S SHOW YOU HOW WE CAN <br>
+                        USE TECH TO GROW YOUR <br>
+                         BUSINESS !
+                    </h1>
+                </div>
+                <div class="button-container">
+                    <a href="#" class="button" style="position: relative; top: 50px;">GET STARTED NOW &rarr;</a>
+                  </div>
+            </div>
+        </div>
+
+        <div class="form">
+            <div class="form-content">
+                <div>
+                    <img src="pexels-photo-3184292.jpeg" alt="..." style="width: 800px; border-radius: 35px;">
+                </div>
+                <div class="form-imput">
+                    <div class="first-part">
+                        <div>
+                            <input type="text" placeholder="Your Name">
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Email Address">
+                        </div>
+                    </div>
+                    <div class="second-part">
+                        <div>
+                            <input type="date">
+                        </div>
+                        <div>
+                            <input type="datetime" placeholder="Select Time">
+                        </div>
+                    </div>
+                    <textarea placeholder="Type your message"></textarea>
+                    <a href="#" class="form-button">MAKE AN APPOINTMENT &rarr;</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="ending-dets">
+            <div class="ending-detsCont">
+                <div>
+                    <h3>OUR ADDRESS</h3>
+                    <span>Lagos, Nigeria</span>
+                </div>
+                <div>
+                    <h3>OUR CONTACT</h3>
+                    <span>SUPPORT</span> <br>
+                    <span style="font-size: 25px !important; color: #FFFFFF;">0903 791 2235</span>
+                </div>
+                <div>
+                    <h3>USEFUL LINKS</h3> 
+                    <li><a href="#">Products</a></li>
+                    <a href="#">Careers</a>
+                </div>
+                <div>
+                    <h3>OUR SERVICES</h3> 
+                    <li><a href="#">Powpa</a></li>
+                    <li><a href="#">Simpo</a></li>
+                    <a href="#">Software Dev</a>
+                </div>
+                <div>
+                    <h3>About</h3> 
+                    <li><a href="#">About Us</a></li>
+                    <a href="#">Send a Message</a>
+                </div>
+            </div>
+
+            <hr class="ending-hr">
+
+            <div class="end-flex">
+                <div>
+                    <img src="yip-online (1).png" alt="..." style="width: 100px;">
+                </div>
+                <div>
+                    <p>Yip-Online IT Services. © 2023. All Rights Reserved</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
